@@ -4,13 +4,13 @@ module.exports = {
 		port : 3e3
 	},
 	dropbox: {
-		"consumer_token" : "5ays2j2ta10czoi",
-		"consumer_secret" :"th7pluzigovu5cn"
+		"consumer_token" : "",
+		"consumer_secret" :""
 	},
 	db : {
 		table : "dropin",
 		user  : "dropin",
-		pw	  : "wNME4maDEdAz98s8",
+		pw	  : "",
 		port  : 3306,
 		host  : "localhost"
 	}
