@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Drop In | Panel</title>
+        <meta charset="utf-8" />
+        <link href="/assets/main.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/template.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/imprint.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+    <div id="content">
+        <div id="header">
+            <a href="/" class="block">
+                <img src="/assets/icon-simple2.png" alt="dropin" class="icon" />
+                <h1>Drop In</h1>
+            </a>
+            <ul class="menu">
+                <li class="first"><a href="/logout">Logout</a></li>
+                <li>${email}</li>
+                <!--<li><a href="/">Login</a></li>-->
+            </ul>
+        </div>
+        <div id="essence">
+       	<form method="POST" action="/panel/add">
+        	<label for="link">Download file: </label>
+        	<input type="url" name="link" required placeholder="http://example.com/example.txt"/>
+        	<label for="filename">Save as: </label>
+        	<input type="text" name="filename" required placeholder="myFilename.txt"/>
+        	<input type="submit" value="Submit"/>
+        </form><br/>
+			<h3>Active dowonloads</h3>
+			<p><a href="/panel/clean">Clear all finished downloads</a></p>
+			{{each(i, dl) downloads}}
+			<div class="dark"> 
+				<h3>${dl.filename}</h3>
+				<i>${dl.url}</i>
+				<p>Status: 
+					{{if dl.status===0}}  <span style="color:#ccc">pending</span>
+					{{else dl.status===1}}<span style="color:#8e8">downloading</span>
+					{{else dl.status===2}}<span style="color:#8e8">uploading</span>
+					{{else dl.status===3}}<span style="color:#88e">success!</span>
+					{{else dl.status===4}}<span style="color:#e88">failure</span>
+					{{/if}}
+				</p>
+				{{if dl.status>2}}<p>
+					<a href="/panel/delete/${dl.id}">delete</a>
+					<a href="/panel/retry/${dl.id}">retry</a>
+				</p>{{/if}}
+			</div><br/>
+			{{/each}}
+		</div>
+        <div id="footer">
+        	<div class="inner">
+	        	<a class="item first" href="imprint.html">Imprint</a>
+        		<a class="item" href="about.html">About</a>
+        		<a class="item last" href="http://www.dropbox.com/referrals/NTg0Mzc4OQ">Powered by Dropbox</a>
+        		<div class="credits">© 2010 by <a href="http://feedic.com">Felix Böhm</a> & <a href="http://prietz.org/">Pablo Prietz</a></div>
+	        </div>
+        </div>
+    </div>
+    </body>
+</html>

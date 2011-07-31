@@ -1,0 +1,82 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    text-decoration: none;
+    border: none;
+    list-style: none;
+    outline: none;
+}
+
+/* 	
+	Background pattern from:
+	http://www.dinpattern.com/2010/07/29/prestige-cod/
+*/
+html {
+    background: url(prestige.gif) repeat;
+    font-family: HelveticaNeue-Light, Helvetica Neue Light, HelveticaNeue, Helvetica, arial, serif;
+}
+
+#footer {
+	height: 50px;
+	width: 800px;
+	float: left;
+}
+#footer .inner {
+	margin: 0px auto;
+	margin-top: 10px;
+	width: 600px;
+	border: 2px solid rgba(107, 192, 239,.75);
+	overflow: hidden;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+	text-shadow: 0px 0px 5px rgba(0,0,0,.3);
+}
+#footer .inner a.item:link,
+#footer .inner a.item:visited {
+	font-size: .75em;
+	float: right;
+	padding: 3px 5px;
+	color: rgba(107, 192, 239,1);
+	border-left: 1px solid rgba(107, 192, 239,.75); 
+	-webkit-transition: all 0.25s linear;
+}
+#footer .inner a.item:focus,
+#footer .inner a.item:hover,
+#footer .inner a.item:active {
+	background: rgba(107, 192, 239,.1);
+	color: rgba(255, 255, 255, .75);
+	-webkit-transition: all 0.25s linear;
+}
+#footer .inner a.item.first {
+	padding-right: 10px;
+}
+#footer .inner a.item.last {
+	border-left: 0px solid rgba(107, 192, 239,.75);
+	font-style: italic;
+	background: rgba(107, 192, 239,0);
+}
+#footer .inner .credits {
+	float: left;
+	color: rgba(107, 192, 239,1);
+	text-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+	font-size: .75em;
+	padding: 3px 0px 3px 10px;
+}
+#footer .inner .credits a:link,
+#footer .inner .credits a:visited {
+	color: rgba(107, 192, 239,1);
+	-webkit-transition: all 0.25s linear;
+}
+#footer .inner .credits a:focus,
+#footer .inner .credits a:hover,
+#footer .inner .credits a:active {
+	color: rgba(255, 255, 255, .75);
+	text-shadow: 0px 0xp 5px rgba(0,0,0,.75);
+	-webkit-transition: all 0.25s linear;
+}

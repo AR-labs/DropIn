@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+#essence {
+    font-size: 13px;
+    text-align: center;
+    color: rgba(107, 192, 239,1);
+}
+#intro {
+    padding: 10px 75px;
+    font-size: 12px;
+    width: 400px;
+    margin: 0px auto;
+}
+#imprint {
+    padding: 0px;
+}
+#imprint table {
+    display: block;
+    margin: 0px auto;
+    width: 200px;
+}
+#imprint table .left { text-align: right; }
+#imprint table .right { text-align: left; }
+#imprint a {
+    color: rgba(213, 224, 230,1);
+    font-style: italic;
+}
+#imprint a:focus,
+#imprint a:hover,
+#imprint a:active {
+    text-decoration: underline;
+}
+#imprint .centered { text-align: center; font-weight: bold; }
+
+.dark {
+    background: rgba(0,0,0,.3);
+    border-top: 1px solid rgba(0,0,0,.3);
+    border-bottom: 1px solid rgba(0,0,0,.3);
+    padding: 20px 25px;
+    margin: 25px;
+    text-align: justify;
+    font-family: Georgia, Times, serif;
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.75) inset;
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.75) inset;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.75) inset;
+}

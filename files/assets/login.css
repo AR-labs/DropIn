@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+#content {
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -201px 0px 0px -401px;
+	background: rgba(255,255,255,.1);
+    border: 1px solid rgba(0,0,0,1);
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
+}
+.icon {
+    display: block;
+    margin: 40px 25px 10px 25px;
+    height: 300px;
+    width: 300px;
+    float: left;
+}
+#textwrap {
+    float: left;
+    height: 300px;
+    width: 400px;
+    margin: 40px 50px 10px 0px;
+}
+#textwrap h1 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 6em;
+    font-weight: bold;
+    color: rgb(213, 224, 230);
+    color: rgba(213, 224, 230,1);
+    text-shadow: 0px 0px 200px rgb(107, 192, 239);
+	text-shadow: 0px 0px 200px rgba(107, 192, 239,.75);
+	-webkit-text-stroke: 2px rgba(0,0,0,.1);
+	white-space: nowrap;
+/*
+    -webkit-animation-name: glow;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+*/
+}
+#textwrap p {
+    margin-top:-10px;
+    text-align: right;
+    font-size: 1.5em;
+    color: rgb(107, 192, 239);
+    color: rgba(107, 192, 239,1);
+    text-shadow: 0px 0px 5px rgb(0,0,0);
+	text-shadow: 0px 0px 5px rgba(0,0,0,.5);
+    line-height: .9em;
+}
+
+#login {
+	display: block;
+	width: 170px;
+	padding: 10px 0px;
+	margin: 0px auto;
+	margin-top: 50px;
+	font-weight: bold;
+	text-align: center;
+	color: rgba(213, 224, 230,1);
+	background-color: rgba(107, 192, 239,.3);
+	border: 2px solid rgba(107, 192, 239,.75);
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	-webkit-transition: background-color 0.25s linear;
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+#login:focus,
+#login:hover,
+#login:active {
+	background-color: rgba(107, 192, 239,.4);
+	text-shadow: 0px 0px 3px rgba(0,0,0,.75);
+	-webkit-transition: all 0.25s linear;
+}
+
+
+#login.init{
+	color: rgba( 200, 200, 200, .4);
+}
+#login.progressing{
+	color: rgba( 107, 192, 239, .3);
+}
+#login.init:after, #login.progressing:after{
+	font-size: .7em;
+	display: block;
+	content: "Getting request url";
+}
+#login.fail{
+	background-color: rgba(240, 10, 10,.3);
+	color: rgba( 240, 10, 10, .6);
+	border-color: red;
+}
+#login.fail:after{
+	font-size: .7em;
+	display: block;
+	content: "Couldn't receive request key!";
+}
+@-webkit-keyframes glow {
+    from {
+		text-shadow: 0px 0px 200px rgba(107, 192, 239,.75);
+    }
+    50% {
+    	text-shadow: 0px 0px 50px rgba(107, 192, 239,.75);
+    }
+    to {
+        text-shadow: 0px 0px 200px rgba(107, 192, 239,.75);
+    }
+}
